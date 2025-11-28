@@ -30,13 +30,38 @@ To develop a Python class with functions to:
 4. **Create an object** of the class
 5. **Call** the methods in order: `create_list()`, `insertion_sort()`, and `print_list()`
 6. **End the program**
-
 ---
-
 ## 💻 PROGRAM:
-
-ADD CODE HERE
-
+```
+class Numbers:
+    def __init__(self, N=0):
+        self.N = int(input())
+    def create_list(self):
+        self.L=[]
+        for i in range(self.N):
+            x=int(input())
+            self.L.append(x)
+    def sorting(self):
+        for i in range(1,len(self.L)):
+            key=self.L[i]
+            j=i-1
+            while j>=0 and key < self.L[j]:
+                self.L[j+1]=self.L[j]
+                j=j-1
+            self.L[j+1]=key
+    def print_List(self):
+        for i in range(self.N):
+            print(self.L[i])
+L1=Numbers()
+L1. create_list()
+print('Before Sorting')
+L1.print_List()
+L1.sorting()
+print('After Sorting')
+L1.print_List()
+```
 ## OUTPUT:
+<img width="507" height="636" alt="image" src="https://github.com/user-attachments/assets/964f1d52-ca37-40c2-b5b3-c0c73a4fe073" />
 
 ## RESULT:
+Thus, the program is successfully executed.
